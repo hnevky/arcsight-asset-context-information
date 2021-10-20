@@ -6,9 +6,11 @@ ArcSight ESM (aka Detect in future releases) has an Integration Command capabili
 ## Instalation
 Import the Asset_information_???.arb file into Packages within the ArcSight ESM Console. The Asset Information package should be visible in /All Packages/ArcSight Foundation, but it will be grayed out.
 Install the package with context menu
+
 ![Install the package](/images/Install_package.png)
 
 There should be 3 installed Integration Command resources:
+
 ![Package installed](/images/Package_installed.png)
 
 
