@@ -1,12 +1,12 @@
 # arcsight-asset-context-information
-Get external asset context information via Integration Command in ArcSight ESM
+Show external asset context information via Integration Command in ArcSight ESM within external CMS (aka Micro Focus Configuration Management System/CMDB/uCMDb/UD).
 
 ArcSight ESM (aka Detect in future releases) has an Integration Command capability that can take an action on an object, usualy an event field or the whole event. The action can be a script or a URL call. This extention uses the URL call where you can set the host and other variebles according to your environment.
 
 ---
 ## Installation
 Import the Asset_information_???.arb file into Packages within the ArcSight ESM Console. The Asset Information package should be visible in /All Packages/ArcSight Foundation, but it will be grayed out.
-Install the package with context menu
+Install the package with context menu:
 
 ![Install the package](/images/Install_package.png)
 
@@ -74,9 +74,9 @@ Any time you need to check the Asset information in external system, use the con
 ### Asset lookup result
 ![Asset Lookup](/images/CMS_lookup_result.png)
 
-
-# Version log
+---
+## Version log
 0.1 - initial MVP for SaaS version of CMS  
-0.2 - added On-Prem command next to SaaS command lookup  
+0.2 - added On-Prem command next to SaaS command lookup
 
 
