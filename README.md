@@ -4,6 +4,33 @@ Show external asset context information via Integration Command in ArcSight ESM 
 ArcSight ESM (aka Detect in future releases) has an Integration Command capability that can take an action on an object, usualy an event field or the whole event. The action can be a script or a URL call. This extention uses the URL call where you can set the host and other variebles according to your environment.
 
 ---
+## Version log
+0.1 - initial MVP for SaaS version of CMS  
+0.2 - added On-Prem command next to SaaS command lookup
+
+---
+## Usage of Integration Command
+Any time you need to check the Asset information in external system, use the context menu on the object like a `sourceAddress` and select `Integration Command/CMS lookup`. Note you may need to login first into the external system if you are not authenticated automatically, if that happens, just louch the command again after succesful login and it show case the needed asset information.
+
+### ArcSight ESM Console (JAVA client)
+![Console usage](/images/Integration_Command_usage.png)
+
+### ArcSight Command Center (web client)
+![Web usage](/images/Integration_Command_usage_web.png)
+
+### Asset lookup result (on prem CMS) - single IP address found in the CMS
+![Asset Lookup](/images/CMS_lookup_result.png)
+
+### Asset lookup result (SaaS CMS) - four IP addresses found in the CMS
+![Asset Lookup](/images/assets-4-found.png)
+
+### Asset lookup result - drill down to particular host SW
+![Asset Lookup](/images/asset-sw.png)
+
+### Asset lookup result - drill down to particular host HW
+![Asset Lookup](/images/asset-hw.png)
+
+---
 ## Installation
 Import the Asset_information_???.arb file into Packages within the ArcSight ESM Console. The Asset Information package should be visible in /All Packages/ArcSight Foundation, but it will be grayed out.
 Install the package with context menu:
@@ -60,23 +87,4 @@ When you add more than one `Target`, i.e. `CMS-prod` and `CMS-dev`:
 Then the Integration Command will ask you every time you launch it on what Target system you would like to perform the action:
 
 ![Ask for Target before launch](/images/Ask_target_before_launch.png)
-
----
-## Usage of Integration Command
-Any time you need to check the Asset information in external system, use the context menu on the object like a `sourceAddress` and select `Integration Command/CMS lookup`. Note you may need to login first into the external system if you are not authenticated automatically, if that happens, just louch the command again after succesful login and it show case the needed asset information.
-
-### Console (JAVA client)
-![Console usage](/images/Integration_Command_usage.png)
-
-### ArcSight Command Center (web client)
-![Web usage](/images/Integration_Command_usage_web.png)
-
-### Asset lookup result
-![Asset Lookup](/images/CMS_lookup_result.png)
-
----
-## Version log
-0.1 - initial MVP for SaaS version of CMS  
-0.2 - added On-Prem command next to SaaS command lookup
-
 
