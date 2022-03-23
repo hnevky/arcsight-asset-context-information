@@ -1,7 +1,7 @@
 # arcsight-asset-context-information
 Show external asset context information via Integration Command in ArcSight ESM within external CMS (aka Micro Focus Configuration Management System/CMDB/uCMDb/UD).
 
-ArcSight ESM (aka Detect in future releases) has an Integration Command capability that can take an action on an object, usualy an event field or the whole event. The action can be a script or a URL call. This extention uses the URL call where you can set the host and other variebles according to your environment.
+ArcSight ESM (aka Detect in future releases) has an Integration Command capability that can take an action on an event field like hostname or IP address. The action can be a script or a URL call. This extention uses the URL call where you can customise the host and port settings according to your CMS environment.
 
 ---
 ## Version log
@@ -10,7 +10,7 @@ ArcSight ESM (aka Detect in future releases) has an Integration Command capabili
 
 ---
 ## Usage of Integration Command
-Any time you need to check the Asset information in external system, use the context menu on the object like a `sourceAddress` and select `Integration Command/CMS lookup`. Note you may need to login first into the external system if you are not authenticated automatically, if that happens, just louch the command again after succesful login and it show case the needed asset information.
+Any time you need to check the Asset information in external CMS system, use the context menu on the field like a `sourceAddress` or `destinationHostname` and select `Integration Command/CMS lookup`. Note you may need to login first into the external system if you are not authenticated automatically, if that happens, just launch the Integration command again after succesful login and it will show case the needed asset information.
 
 ### ArcSight ESM Console (JAVA client)
 ![Console usage](/images/Integration_Command_usage.png)
@@ -18,10 +18,10 @@ Any time you need to check the Asset information in external system, use the con
 ### ArcSight Command Center (web client)
 ![Web usage](/images/Integration_Command_usage_web.png)
 
-### Asset lookup result (on prem CMS) - single IP address found in the CMS
+### Asset lookup result - single IP address found in the CMS (on prem CMS)
 ![Asset Lookup](/images/CMS_lookup_result.png)
 
-### Asset lookup result (SaaS CMS) - four IP addresses found in the CMS
+### Asset lookup result - four hosts sharing same IP address recently (SaaS CMS)
 ![Asset Lookup](/images/assets-4-found.png)
 
 ### Asset lookup result - drill down to particular host SW
@@ -88,3 +88,4 @@ Then the Integration Command will ask you every time you launch it on what Targe
 
 ![Ask for Target before launch](/images/Ask_target_before_launch.png)
 
+---
